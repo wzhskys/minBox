@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>jQuery.minBox 遮罩层效果</title>
+	<link type="text/css" href="css/reset.css" rel="stylesheet">
+    <link type="text/css" href="css/index.css" rel="stylesheet">
+	<link type="text/css" href="css/minBox.css" rel="stylesheet">
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/jQuery.minBox.0.8.6.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="head">
+		<div class="head-main">
+			<a class="logo" href="#">jQuery.min</a>
+			<ul class="nav">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">选项卡</a></li>
+				<li><a href="#">Cookie</a></li>
+				<li><a class="on" href="#">弹出框</a></li>
+				<li><a href="#">图片轮播</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	<!-- 中间 -->
+	<div class="main clearfloat">
+	    <div class="main-l">
+	    	<ul class="main-l-aside">
+	    		<li><a href="javascript:void(0);">弹出页面对话框</a></li>
+	    		<li><a href="javascript:void(0);">弹出加载框</a></li>
+	    		<li><a href="javascript:void(0);">弹出框</a></li>
+	    		<li class="last"><a href="javascript:void(0);">图片轮播</a></li>
+	    	</ul>
+	    </div> 	
+	    <div class="main-r">
+	    	<div class="main-r-hd">
+	    		一：弹出本页的对话框
+	    	</div>
+	    	<div class="mt20 clearfloat">
+	    		<a class="btn-box" id="btnBox1" href="javascript:void(0);">弹出页面对话框</a>
+	    		<a class="btn-box" id="btnBox9" href="javascript:void(0);">关闭对话框</a>
+	    	</div>
+	    	<div class="main-r-hd mt20">
+	    		二：弹出加载提示框
+	    	</div>
+	    	<div class="main-r-bd mt20 clearfloat">
+	    		<a class="btn-box" id="btnBox2" href="javascript:void(0);">弹出加载框</a>
+	    		<a class="btn-box" id="btnBox33" href="javascript:void(0);">顶部提示框</a>
+	    		<a class="btn-box" id="btnBox3" href="javascript:void(0);">底部提示框</a>
+	    		<a class="btn-box" id="btnBox4" href="javascript:void(0);">纯文字提示框</a>
+	    	</div>
+	    	<div class="main-r-hd mt20">
+	    		三：测试影响干扰
+	    	</div>
+	    	<div class="main-r-bd mt20 clearfloat">
+	    		<div class="fl">
+	    			<p>select</p>
+	    			<select>
+	    				<option>请选择</option>
+	    			</select>
+	    		</div>
+	    		<div class="fl ml20">
+	    			<p>embed</p>
+	    			<embed src="http://player.youku.com/player.php/sid/XNzQ1OTEzNjUy/v.swf" allowFullScreen="true" quality="high" width="280" height="200" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+	    		</div>
+	    		<div class="fl ml20">
+	    			<p>iframe</p>
+	    			<iframe height=200 width=280 src="http://player.youku.com/embed/XNzQ1OTEzNjUy" frameborder=0 allowfullscreen></iframe>
+	    		</div>
+	    		<div class="fl ml20">
+	    			<p>Object</p>
+                    
+	    		</div>
+	    	</div>
+	    	
+	    	<div class="main-r-hd">
+	    		四：弹出本页的对话框
+	    	</div>
+	    	<div class="mt20 clearfloat">
+	    		<a class="btn-box" id="btnBox5" href="javascript:void(0);">动态对话框</a>
+	    		<a class="btn-box" id="btnBox6" href="javascript:void(0);">点击确定后回调</a>
+	    	</div>
+	    	
+	    	<div class="main-r-hd mt20">
+	    		五：往指定框里添加动态加载提示框
+	    	</div>
+	    	<div class="mt20 clearfloat">
+	    		<a class="btn-box" id="btnBox7" href="javascript:void(0);">动态加载提示框</a>
+	    		<a class="btn-box" id="btnBox8" href="javascript:void(0);">动态加载提示框</a>
+	    	</div>
+	    	<div class="clearfloat mt20">
+	    		<div class="main-bd-boxa">
+	    			这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>
+	    		</div>
+	    		<div class="main-bd-boxb">
+	    			这里显示内容这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>这里显示内容<br/>
+	    		</div>
+	    	</div>
+	    	
+	    	<div class="main-r-hd mt20">
+	    		六：Tips提示信息框
+	    	</div>
+	    	<div class="mt20 clearfloat">
+	    		<a class="btn-box" id="btnBox11" style="width:150px;height:35px;" href="javascript:void(0);">Tips提示向上</a>
+	    		<a class="btn-box" id="btnBox12" style="width:120px;height:50px;" href="javascript:void(0);">Tips提示向右</a>
+	    		<a class="btn-box" id="btnBox13" href="javascript:void(0);">Tips提示向下</a>
+	    		<a class="btn-box" id="btnBox14" style="width:220px;" href="javascript:void(0);">Tips提示向左</a>
+	    	</div>
+
+            <div class="main-r-hd mt20">
+                七：字体节点下面显示提示框
+            </div>
+            <div class="mt20 clearfloat">
+                <a href="javascript:void(0);" id="btnBox15">提示框1</a>
+                <a class="btn-box" id="btnBox16" style="width:120px;height:50px;" href="javascript:void(0);">提示框2</a>
+                <a href="javascript:void(0);" class="ml30" id="btnBox17">提示框3</a>
+                <a href="javascript:void(0);" style="margin-left:600px;" id="btnBox18">提示框4</a>
+            </div>
+	    	
+	    </div> 	
+	</div>
+	<!-- 底部-->
+	<div class="foot">
+	   <div class="foot-main">
+	   	   <a href="#">jQuery.min</a>
+	   </div> 	
+	</div>
+	
+	<!-- 对话框1 -->
+	<div class="box-pop" id="box-pop1" style="display:none">
+		<ul class="boxHeader"><li class="fl">本页弹出框</li>
+			<li class="fr"><a class="closeBox minClose"> </a></li>
+		</ul>
+		<div class="c2">
+			<table style="margin:0 auto;text-align:center">
+				<tr><td><span class='+opts.msgClass+'> </span></td>
+					<td>标题内容</td>
+				</tr>
+			</table>
+		</div>
+	    <p>这里显示内容</p>
+	    <select style="margin-left:190px;"><option>请选择选项</option></select>
+	    <div class="box-pop-but clearfloat"> 
+	    	<a class="queding minClose"></a>
+	    </div>
+	</div>
+	<!--
+	<div class="tips" style="display:block;">
+		<div class="tips-cont">
+			<p>这里显示提示的信息</p>
+			<s class="l"></s>
+		</div>
+	</div>
+	-->
+    <div class="msgs-show" id="msgShow">
+        <div class="msgs-cont">
+            <p>1, 请选择选项，这里显示的内容很精彩！</p>
+            <p>2, 这里显示的内容很精彩！</p>
+            <p>3, 好好学习，天天向上</p>
+            <a href="javascript:;" class="msgs-close"></a>
+        </div>
+    </div>
+
+    <div class="msgs-show" id="msgShow1" style="background-color:#a4c302;">
+        <div class="msgs-cont">
+            <p>1, 请选择选项，这里显示的内容很精彩！</p>
+            <p>2, 这里显示的内容很精彩！</p>
+        </div>
+    </div>
+
+    <div class="msgs-show" id="msgShow2" style="background-color:#a4c302;">
+        <div class="msgs-cont">
+            <p>1, 请选择选项，这里显示的内里显示的内容很精里显示精里显示的内容很精里显示容很精彩！</p>
+            <p>2, 这里显示的内容很精彩！</p>
+        </div>
+    </div>
+<pre style="display:none;">
+    $('#btnBox1').click(function(){
+    	$('#box-pop1').minBox({
+    		layClick: true,
+    		//showOverlays: false,
+    		drag: true,
+    		//bodyScroll: true,
+    		direc: 'rb'
+    	});
+    	//$('#box-pop1').minBox('nolay');  //支持传字符串，去掉背景层
+    });
+</pre>
+</body>
+<script type="text/javascript">
+    function buyFunc(){
+    	alert(1);
+    };
+    //---------------   方法一    -------------------
+    //弹出本页的对话框
+    $('#btnBox1').click(function(){
+    	$('#box-pop1').minBox({
+    		layClick: true,
+    		//showOverlays: false,
+    		drag: true,
+    		//bodyScroll: true,
+    		direc: 'rb'
+    	});
+    	//$('#box-pop1').minBox('nolay');  //支持传字符串，去掉背景层
+    });
+    
+    $('#btnBox9').click(function(){
+    	//$.min.close();
+        $('#box-pop1').minBox({
+            layClick: true,
+            //showOverlays: false,
+            drag: true,
+            //bodyScroll: true,
+            direc: 'mm'
+        });
+    });
+    
+    //定位窗口位置-有下角
+    // $('#box-pop1').minBox({
+		// layClick: true,
+		// //showOverlays: false,
+		// //drag: true,
+		// direc: 'rb',
+		// bodyScroll: true,
+		// showOverlays: false,
+		// dirOnly: true
+	// });
+    
+    //---------------   方法二    -------------------
+    $('#btnBox2').click(function(){
+    	minMsgBox();
+    });
+    $('#btnBox33').click(function(){
+    	minMsgBox('天气好，心情就好...','le','','mt');
+    });
+    $('#btnBox3').click(function(){
+    	minMsgBox('天气好，心情就好...','le','','mb');
+    });
+    $('#btnBox4').click(function(){
+    	minMsgBox('天气好，心情就好...');
+    });
+    
+    //---------------   方法三    -------------------
+    $('#btnBox5').click(function(){
+//    	mixBox({
+//    		msgHead: '收藏窗口',
+//    		drag: true
+//    	});
+        //mixOk();  // 操作成功
+        //mixError();  // 操作失败
+        mixQue('用户名不能为空！','字段格式不正确');  // 操作失败
+    });
+    $('#btnBox6').click(function(){
+    	mixBox({
+    		msgHead: '收藏窗口',
+    		overFunc: 'buyFunc'
+    	});
+    });
+    
+    //---------------   方法四    -------------------
+    $('#btnBox7').click(function(){
+    	$('.main-bd-boxa').minLoadBox();
+    	minLoadClose();
+    });
+    $('#btnBox8').click(function(){
+    	$('.main-bd-boxb').minLoadBox();
+    });
+    
+    //---------------   方法五   -------------------
+    $('#btnBox11').minTips({
+    	tipStyle: 't',
+    	tipWidth: 120,
+    	tipHeight: 54,
+    	tipConts: '这里显示的内容很精彩,内容很精彩的内容很精彩！',
+    	events : 'click'
+    });
+    $('#btnBox12').minTips({
+    	tipStyle: 'r',
+        tipHeight: 18,
+    	tipConts: '这里显示的内容很精彩！',
+        bgColor: 'red'
+    });
+    $('#btnBox13').minTips({
+    	tipStyle: 'b',
+        tipHeight: 18,
+    	tipConts: '这里显示很精彩！',
+        bgColor: 'blue'
+    });
+    $('#btnBox14').minTips({
+    	tipStyle: 'l',
+        tipHeight: 18,
+    	tipConts: '出错了！',
+        bgColor: 'green'
+    });
+
+    //---------------   方法六   -------------------
+//    $('#btnBox15').slideShow({
+//        showNode: '#msgShow1'
+//    });
+//    $('#btnBox16').slideShow({
+//        showNode: '#msgShow',
+//        events: 'click'
+//    });
+//    $('#btnBox17').slideShow({
+//        showNode: '#msgShow',
+//        events: ''
+//    });
+    //简写 - 滑动节点，显示节点，事件（默认为hover）
+    slideShow('#btnBox15','#msgShow1');
+    slideShow('#btnBox16','#msgShow','click');
+    slideShow('#btnBox17','#msgShow','');
+    slideShow('#btnBox18','#msgShow2','');
+
+
+</script>
+</html>
